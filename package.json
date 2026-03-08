@@ -1,0 +1,57 @@
+{
+  "name": "signals",
+  "version": "0.1.0",
+  "description": "A tiny, glitch-free, fine-grained reactive signals library with push-pull propagation and a React adapter.",
+  "type": "module",
+  "license": "MIT",
+  "author": "signals contributors",
+  "keywords": [
+    "signals",
+    "reactive",
+    "reactivity",
+    "fine-grained",
+    "computed",
+    "effect",
+    "state-management",
+    "react"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    }
+  },
+  "main": "./dist/core/index.js",
+  "module": "./dist/core/index.js",
+  "types": "./dist/core/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
